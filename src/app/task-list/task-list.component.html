@@ -1,0 +1,9 @@
+<div class="container">
+  <h1 class="title">Gerenciador de Tarefas</h1>
+  <ul class="task-list">
+    <li class="task-item" *ngFor="let tasklist of taskList" [ngStyle]="{'text-decoration': tasklist.concluida ? 'line-through' : 'none'}">
+      <span class="task-description">{{ tasklist.descricao }}</span>
+      <button (click)="toggleConcluida(tasklist)" class="btn">Concluir</button>
+    </li>
+  </ul>
+</div>
